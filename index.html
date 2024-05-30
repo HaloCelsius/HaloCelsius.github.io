@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Picker</title>
+    <link rel="stylesheet" href="sprite.css">
+</head>
+<body>
+    <div class="header">
+        <input type="file" accept="image/*" id="sprite-upload">
+    </div>
+    <div class="settings">
+        <p>Last Clicked : <span id="last-clicked-value"></span></p>
+        <p>Last Hovered: <span id="last-hovered-value"></span></p>
+        <label for="sprite-width">Sprite Width  :</label>
+        <input type="number" id="sprite-width" min="1" value="16"><br>
+        <label for="sprite-height">Sprite Height:</label>
+        <input type="number" id="sprite-height" min="1" value="16">
+    </div>
+    <div id="sprite-container"></div>
+    <script src="javascript.js"></script>
+</body>
+</html>
