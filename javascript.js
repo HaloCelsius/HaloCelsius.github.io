@@ -1,6 +1,6 @@
-let zoomLevel = 2;
-let spriteWidth = 16; // Defult value should be 8x8 but working with mcr so smd
-let spriteHeight = 16;
+let zoomLevel = 1;
+let spriteWidth = 8; // changing this to 8x8 so it will default for others not working with mcr xD
+let spriteHeight = 8;
 let isDragging = false;
 let startCoords = { x: 0, y: 0 };
 let startScroll = { x: 0, y: 0 };
@@ -8,7 +8,7 @@ let startScroll = { x: 0, y: 0 };
 function displaySprites(image) {
     const container = document.getElementById('sprite-container');
     container.innerHTML = '';
-    let scale = 1;
+    let scale = 4; // default zoom, 3 works for 16x16 maybe 4 is better for 8x8?
 
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -19,7 +19,7 @@ function displaySprites(image) {
 
         canvas.width = scaledWidth;
         canvas.height = scaledHeight;
-        ctx.imageSmoothingEnabled = false; //so pixelart got crisp edges, fuck this took a while to fuiger out!!
+        ctx.imageSmoothingEnabled = false; //so pixelart got crisp edges, fuck this took a while to figure out!!
 
         const cellWidth = spriteWidth * scale;
         const cellHeight = spriteHeight * scale;
