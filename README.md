@@ -1,4 +1,4 @@
-# Private Server Sprite Hex Picker Made in Class!
+# Sprite Hex Picker Made in Class!
 
 This tool is designed to assist rotmg private server developers in finding the hexadecimal coordinates of sprites within a sprite sheet. 
 
@@ -11,11 +11,11 @@ This tool is designed to assist rotmg private server developers in finding the h
 
 ## Usage
 
-1. Load up hha0998.github.io
+1. Load up https://halocelsius.github.io/Sprite/index.html
 2. Click on the "Choose File" button to upload your sprite sheet image.
 3. Adjust the sprite width and height if necessary.
 4. Double-click on the desired sprite to copy its hexadecimal coordinates to the clipboard.
 
 ## Credits
 
-Pretty much just made it myself, Wist from RealmDex shared some of his insite on it tho xD
+Pretty much just made it myself, Wist from RealmDex shared some of his insite on it tho
