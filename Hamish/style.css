@@ -1,0 +1,140 @@
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Georgia, serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+    padding: 0 20px;
+}
+
+.sticky-bar {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px 0 20px 20px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.image-left {
+    float: left;
+    margin-right: 15px;
+    width: 150px;
+}
+
+.image-right {
+    float: right;
+    margin-left: 15px;
+    width: 150px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Adds a hover effect */
+}
+
+/* Skills Section */
+#skills {
+    margin: 40px 0;
+}
+
+.skill-category {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul li::before {
+    content: "• ";
+    color: #0a0a0a;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.skill-category ul {
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+}
