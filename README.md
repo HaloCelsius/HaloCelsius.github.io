@@ -1,4 +1,11 @@
-# Sprite Hex Picker Made in Class!
+# Sprite Hex Picker Made in Class! && McRealms Store!
+
+# McRealms Store!
+
+This Store ive made is a usefull tool that lets the customer goto my halocelsius.github.io website and donate.
+when they enter their username into the feild i send handle the process seamlessly ranking them ingame instantly.
+
+# Sprite Hex Picker!
 
 This tool is designed to assist rotmg private server developers in finding the hexadecimal coordinates of sprites within a sprite sheet. 
 
