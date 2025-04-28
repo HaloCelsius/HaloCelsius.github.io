@@ -13,14 +13,31 @@ body {
 html {
     font-size: 0.8vw; 
 }
-
-.background {
+.icaBg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('Assets/minecraft_bg.jpg') no-repeat center center/cover;
+    background: url('Images/Ica/bg.jpg') no-repeat center center/cover;
+}
+
+.mcrBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('Images/Mcr/bg.jpg') no-repeat center center/cover;
+}
+
+.mainBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('Images/bg.jpg') no-repeat center center/cover;
 }
 
 .vignette {
