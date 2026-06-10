@@ -1,250 +1,246 @@
+/* I only load woff2 fonts, and local fonts*/
 
-/* I'm using a .woff2 font here to releave dependancies and speed up the site */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url("Assets/Google-Montserrat.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url("Assets/Google-Montserrat.woff2") format("woff2");
 }
 
-/* Here i load 2 fontface's one for thing text and one for bold text */
+/* i have one loaded for 400 and 700 width as thats more efficient, only 2 needed yknow*/
 @font-face {
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url("Assets/Google-Montserrat.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url("Assets/Google-Montserrat.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: 'Bescii';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("Assets/Bescii-Mono.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+html, body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
 }
 
-
-/* Defines the basic style for default elements */
 body {
-    background-color: rgb(39, 51, 56);
-    font-family: 'Montserrat', sans-serif;
+  background-color: #273338;
+  background-image: radial-gradient(circle, #273338 35%, #172023 100%);
+  background-attachment: fixed;
+  color: #9cb080;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
-/* This element defines structure rather than style */
-html {
-    font-size: 100%;
+a {
+  color: #9cb080;
 }
 
-/* A basic background vignette, empty children tho */
-.vignette {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,0,0,0.5) 100%);
-    pointer-events: none;
+a:visited {
+  color: #9cb080;
 }
 
-/* The Content container, holds the head and body */
+a:hover {
+  color: #f6f0d7;
+}
+
 .pageContents {
-    position: absolute;
-
-    height: 95%;         
-    aspect-ratio: 0.7071; /* a4, srt of (2/1) */
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-
-    color: white;
+  width: 610px;
+  margin: 22px auto 18px auto;
 }
 
-/* Contains buttons */
 .pageHead {
-    position: fixed;
-    width: 100%;
-    height: 10%;
-    
-    background-color: rgb(43, 87, 72);
-    box-shadow: 0 0.1vh 1.0vh rgba(0, 0, 0, .5);
-
-    color: rgb(156, 176, 128);
+  background: #2b5748;
+  padding: 8px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .5);
+  box-shadow: 0 0.1vh 1.0vh rgba(0, 0, 0, .5);
 }
 
-/* Contains buttons */
-.headContents {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 0.75%;
-    margin-right: 0.75%;
-    gap: 0.5%;
+.navTable {
+  width: 100%;
+  border-collapse: separate;
 }
 
-/* Head button */
+.navCell {
+  width: 33%;
+  padding: 0 4px;
+}
+
 .headBtn {
-    display: block;
-    text-decoration: none;
-
-    background: rgb(39, 51, 56);
-    box-shadow: 0 0.025vh 0.85vh rgba(0, 0, 0, .3);
-    width: 100%;
-    height: 7.5vh;
-    margin-top: 1.5%;
-    margin-left: 0.75%;
-    margin-right: 0.75%;
+  display: block;
+  height: 68px;
+  line-height: 68px;
+  background: #273338;
+  color: #f6f0d7;
+  text-align: center;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+  box-shadow: 0 0.025vh 0.85vh rgba(0, 0, 0, .3);
 }
 
-/* Head button */
-.headBtnText {
-    position: relative;
-    color: rgb(246, 240, 215);
-    font-weight: 600;
-    bottom: 12.5%;
-    font-size: 3.0vh;
-    text-align: center;
-}
-
-/* Contains general content */
-.pageBody {
-    position: fixed;
-    width: 100%;
-    height: 87.5%;
-
-    top: 12.5%;
-
-    background-color: rgb(43, 87, 72);
-    box-shadow: 0 0.1vh 1.0vh rgba(0, 0, 0, .5);
-
-    color: white;
-}
-
-/* Contains general content */
-.bodyName {
-    position: absolute;
-    aspect-ratio: 2 / 0.925;
-    width: 65%;
-
-    margin: 1.5%;
-
-
-    background-color: rgb(39, 51, 56);
-    box-shadow: 0 0.025vh 0.85vh rgba(0, 0, 0, .3);
-
-    color: rgb(156, 176, 128);
-
-    font-size: 2vh;
-}
-
-/* Contains general content */
-.bodyPFP {
-    position: absolute;
-    aspect-ratio: 1;
-    width: 30%;
-    right: 0%;
-
-    margin: 1.5%;
-
-    background-color: rgb(39, 51, 56);
-    box-shadow: 0 0.025vh 0.85vh rgba(0, 0, 0, .3);
-
-    color: rgb(156, 176, 128);
-
-    font-size: 2vh;
-}
-
-/* Contains general content */
-.bodyPart {
-position: relative;
-    width: 97%;
-    height: 35%;
-
-    top: 25.5%;
-    left: 1.5%;
-    margin-top: 2.0%;
-
-    background-color: rgb(39, 51, 56);
-    box-shadow: 0 0.025vh 0.85vh rgba(0, 0, 0, .3);
-
-    color: rgb(156, 176, 128);
-
-    font-size: 2vh;
-}
-
-.name-text {
-    position: absolute;
-
-    font-size: 3vh;
-    font-weight: 600;
-    color: rgb(156, 176, 128);
-    text-align: left;
-
-    /* Yea these are pretty magic */
-    left: 5%;
-    top: -5%;
-}
-
-.desc-text {
-    position: relative;
-
-    font-size: 1.65vh;
-    font-weight: 400;
-    color: rgb(156, 176, 128);
-    text-align: left;
-
-    /* Yea these are pretty magic */
-    margin-left: 5%;
-    top: 25%;
-}
-
-.pfp-text {
-    font-family: 'Bescii', sans-serif;
-
-    position: relative;
-
-    font-size: 0.5vh;
-    font-weight: 400;
-    color: rgb(156, 176, 128);
-    text-align: left;
-
-    /* Yea these are pretty magic */
-    left: 4%;
-    top: 5%;
-}
-
-.name-text-middle {
-    position: absolute;
-
-    font-size: 3vh;
-    font-weight: 600;
-    color: rgb(156, 176, 128);
-    text-align: center;
-
-    top: -3.125%;
-    left: 3.125%;
-}
-
-.desc-text-middle {
-    position: absolute;
-
-    font-size: 1.65vh;
-    font-weight: 400;
-    color: rgb(156, 176, 128);
-    text-align: center;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+.headBtn:visited {
+  color: #f6f0d7;
 }
 
 .headBtn:hover {
-    background: rgb(88, 51, 56);
+  background: #583338;
+}
+
+.pageBody {
+  margin-top: 22px;
+  background: #2b5748;
+  padding: 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .5);
+  box-shadow: 0 0.1vh 1.0vh rgba(0, 0, 0, .5);
+}
+
+.topTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.topLeft {
+  vertical-align: top;
+  padding-right: 10px;
+}
+.topRight {
+  width: 180px;
+  vertical-align: top;
+}
+
+.panel {
+  background: #273338;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+  box-shadow: 0 0.025vh 0.85vh rgba(0, 0, 0, .3);
+  overflow: hidden;
+}
+
+.bodyName {
+  height: 180px;
+  padding: 0 22px;
+}
+
+.name-text {
+  margin: 25px 0 10px 0;
+  color: #9cb080;
+  font-size: 29px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.desc-text {
+  margin: 0;
+  color: #9cb080;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.bodyPFP {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  text-align: center;
+}
+
+.pfpImage,
+.pfp-img {
+  display: block;
+  width: 158px;
+  height: 158px;
+  margin: 11px auto 0 auto;
+  border: 0;
+}
+.bodyPart {
+  height: 260px;
+  margin-top: 12px;
+  padding: 0 22px;
+  position: relative;
+}
+
+.name-text-middle {
+  margin: 22px 0 0 0;
+  color: #9cb080;
+  font-size: 29px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.desc-text-middle {
+  width: 360px;
+  margin: 48px auto 0 auto;
+  color: #9cb080;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.linkRow {
+  margin: 22px 0 0 10px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.linkRow a {
+  margin-right: 34px;
+}
+
+.bodyPart .old-note {
+  width: 360px;
+  margin: 12px auto 0 auto;
+  color: #9cb080;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.projectItem {
+  height: auto;
+  min-height: 150px;
+  padding-bottom: 24px;
+  margin-top: 0;
+}
+
+.projectItem + .projectItem {
+  margin-top: 12px;
+}
+
+.projectDesc {
+  width: 460px;
+  margin: 22px auto 0 auto;
+  color: #9cb080;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.projectLinks {
+  margin: 22px 0 0 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.projectLinks a {
+  margin: 0 18px;
+}
+
+/* Older browsers will ignore these but they're still for modern display */
+@media screen and (max-width: 760px) {
+  .pageContents { width: 96%; margin-top: 8px; }
+  .headBtn { height: 44px; line-height: 44px; font-size: 14px; }
+  .pageBody { margin-top: 10px; padding: 6px; }
+  .bodyName { height: auto; min-height: 120px; padding: 10px; }
+  .name-text, .name-text-middle { font-size: 22px; line-height: 25px; margin-top: 10px; }
+  .desc-text, .desc-text-middle, .bodyPart .old-note, .linkRow { font-size: 14px; line-height: 18px; }
+  .desc-text-middle, .bodyPart .old-note { width: auto; margin-top: 20px; }
+  .bodyPart { height: auto; min-height: 180px; padding: 10px; }
+  .bodyPFP { height: 132px; padding: 0; }
+  .pfpImage, .pfp-img { width: 112px; height: 112px; margin-top: 10px; }
+  .linkRow a { margin-right: 10px; }
 }
